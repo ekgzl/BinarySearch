@@ -18,12 +18,12 @@ The repository contains two implementations of the binary search algorithm:
 1. **Iterative Binary Search:** This implementation uses a while loop to iteratively search for the target value in the array.
 2. **Recursive Binary Search:** This implementation uses recursion to search for the target value in the array.
 
-Both implementations are provided in the `binary_search.cpp` file.
+Both implementations are provided in the `main.cpp` file.
 
 ## Usage
 
 To use the binary search algorithm, follow these steps:
-1. Include the `binary_search.cpp` file in your C++ project.
+1. Include the `main.cpp` file in your C++ project.
 2. Call the `binarySearch()` or `recursiveBinarySearch()` function with the appropriate arguments.
 3. The functions return the index of the target value if found, otherwise -1.
 
