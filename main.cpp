@@ -2,56 +2,45 @@
 
 using namespace std;
 
-int binarySearch(int array[],int size,int searchFor)
+
+int recursiveSequentialSearch(int a[],int searchFor,int index,int size)
 {
-    int first,mid;
-    first = 0;
-    int last = size-1;
-
-
-    while(first <= last)
+    if(index > size)
     {
-        mid = (first + last)/2;
+        return -1;
+    }
 
-        if(searchFor == array[mid])
-            return mid;
-        else if(searchFor > array[mid])
-            first = mid +1;
-        else
-            last = mid-1;
+    if(a[index] == searchFor)
+        return index;
+    else
+        return recursiveSequentialSearch(a,searchFor,index+1,size);
+}
+
+int sequentialSearch(int a[],int searchFor,int size)
+{
+    int index = 0;
+
+    while(index < size)
+    {
+        if(a[index] == searchFor)
+            return index;
+        index++;
     }
 
     return -1;
 }
 
-int recursiveBinarySearch(int a[],int searchFor,int first,int last)
-{
-    if(first > last)
-        return -1;
-
-
-    int mid = (first + last) / 2;
-
-    if(a[mid] == searchFor)
-        return mid;
-
-    if(searchFor < a[mid]  )
-        return recursiveBinarySearch(a,searchFor,first,mid-1);
-    else
-        return recursiveBinarySearch(a,searchFor,mid+1,last);
-}
-
 int main() {
 
-    int a[] = {7,15,27,45,87,93};
+    int a[] = {5,9,17,19,26,78};
 
-    int result = recursiveBinarySearch(a,93,0,5);
+    int result = sequentialSearch(a,25,6);
 
     if(result >= 0)
+    {
         cout << "Find, index: " << result;
+    }
     else
-        cout << "Couldn't find.";
-
-
+        cout << "Couldn't find";
 
 }
