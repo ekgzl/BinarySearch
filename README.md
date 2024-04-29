@@ -1,6 +1,6 @@
 # Binary Search Algorithm
 
-This repository contains C++ code for implementing the binary search algorithm. The binary search algorithm is used to efficiently find a target value within a sorted array.
+This repository contains C++ code for implementing the binary search algorithm. The binary search algorithm is used to efficiently find a target value within a sorted array. Also, can find Sequential Search Algorithm in repistory.
 
 ## Contents
 
